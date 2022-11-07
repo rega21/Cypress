@@ -1,0 +1,15 @@
+{
+    "primerUsuario":{
+        "username": "pushingit",
+        "password": "123456!"
+    },
+
+    "numeroTareas":{
+        "tarea1": "enviar tarea 1",
+        "tarea2": "enviar tarea 2",
+        "tarea3": "enviar tarea 3",
+        "tarea4": "enviar tarea 4",
+        "tarea5": "enviar tarea 5",
+        "tarea6": "enviar tarea 6"
+    }
+}
