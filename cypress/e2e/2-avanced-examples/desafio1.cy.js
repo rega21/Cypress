@@ -26,7 +26,7 @@ describe ("Actividad complementaria 1", () => {
         cy.get('#task').type('quedo pronto');
 
         cy.get('#sendTask').click();
-        //cy.contains('send', {matchCase:false}).click();
+        //cy.containsss('send', {matchCase:false}).click();
 
     });
 
