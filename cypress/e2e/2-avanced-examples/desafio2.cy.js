@@ -24,7 +24,7 @@ describe ("Segundo desafio", () => {
     })
   
   
-    it('Ingresar cinco tareas ', () =>{
+    it('Ingresar cincoo tareas ', () =>{
   
        // INGRESADO
        cy.xpath("//a[contains(@id, 'todolistlink')]").click() 
