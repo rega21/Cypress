@@ -18,11 +18,11 @@ describe ('Desafio 3', () => {
 
     beforeEach("beforeEach", () => {
         cy.visit('');
-        cy.wait(2000);
+       // cy.wait(2000);
        // cy.get("#registertoggle").dblclick();
         cy.xpath("//span[contains(@id, 'registertoggle')]").dblclick() 
 
-        cy.wait(2000)
+       // cy.wait(2000)
         loginPage.escribirUsuario(datosLogin.primerUsuario.username);
         loginPage.escribirContraseña(datosLogin.primerUsuario.password);
         loginPage.clickBotonLogin();
@@ -32,15 +32,15 @@ describe ('Desafio 3', () => {
     it('INGRESAR SHOP' , () => {
 
         productos.clickOnlineShop().click();
-        cy.wait(3000); 
+       // cy.wait(3000); 
  
         productos.clickBlackJacket().click();
         productos.clickCerraMensajeAlert().click();
-        cy.wait(2000);
+      //  cy.wait(2000);
  
         productos.clickBlacktshirt().click();
         productos.clickCerraMensajeAlert().click();
-        cy.wait(2000); 
+      //  cy.wait(2000); 
  
         productos.clickGoShoppingCart().click();
         
