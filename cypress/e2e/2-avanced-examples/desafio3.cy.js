@@ -18,7 +18,7 @@ describe ('Desafio 3', () => {
 
     beforeEach("beforeEach", () => {
         cy.visit('');
-       // cy.wait(2000);
+
        // cy.get("#registertoggle").dblclick();
         cy.xpath("//span[contains(@id, 'registertoggle')]").dblclick() 
 
@@ -31,25 +31,21 @@ describe ('Desafio 3', () => {
 
     it('INGRESAR SHOP' , () => {
 
+        const blackJacket = compra.blackJacket
+        const blacktShirt = compra.blacktShirt
+
         productos.clickOnlineShop().click();
-       // cy.wait(3000); 
- 
-        productos.clickBlackJacket().click();
+  
+        productos.retornarBlackJacket(blackJacket).click();
         productos.clickCerraMensajeAlert().click();
-      //  cy.wait(2000);
- 
-        productos.clickBlacktshirt().click();
+
+        productos.retornarBlackShirt(blacktShirt).click();
         productos.clickCerraMensajeAlert().click();
-      //  cy.wait(2000); 
- 
+
         productos.clickGoShoppingCart().click();
         
-        //cy.contains('Show total price', {matchCase:false}).click()
-        
-        // cy.xpath("//button[contains(text(), 'Show total price')]").dblclick() 
         cy.xpath("//button[starts-with(text(), 'Show total')]").dblclick() 
 
-       
     })
 
 })
