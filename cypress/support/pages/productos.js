@@ -1,28 +1,22 @@
 export class Productos{
     constructor() {
         this.onlineShop = '#onlineshoplink';
-        this.blackJacket = '#blackJacket';
         this.cerrarMensajeAlert = '#closeModal';
-        this.blacktshirt = '#blacktshirt';
         this.goShoppingCart = '#goShoppingCart';
     };
 
-
-  //  cy.xpath("//a[contains(@id, 'onlineshoplink')]").dblclick() 
-    
-    
-    
 
     clickOnlineShop(){
         return cy.get(this.onlineShop)
     };
 
-    clickBlackJacket(){
-        return cy.get(this.blackJacket)
+    retornarBlackJacket(elegido){ 
+        return cy.get(elegido)
     };
-    clickBlacktshirt(){
-        return cy.get(this.blacktshirt)
+    retornarBlackShirt(elegido2){ 
+        return cy.get(elegido2)
     };
+
 
     clickCerraMensajeAlert(){
         return cy.get(this.cerrarMensajeAlert)
