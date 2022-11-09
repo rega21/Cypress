@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-import {Productos}from'../support/pages/productos'
-import {LoginPage}from'../support/pages/loginPage'
+import {Productos}from'../../support/pages/productos'
+import {LoginPage}from'../../support/pages/loginPage'
 
 describe ('Desafio 3', () => {
 
