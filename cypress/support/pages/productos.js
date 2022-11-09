@@ -5,18 +5,13 @@ export class Productos{
         this.goShoppingCart = '#goShoppingCart';
     };
 
-
     clickOnlineShop(){
         return cy.get(this.onlineShop)
     };
 
-    retornarBlackJacket(elegido){ 
+    comprarProducto(elegido){ 
         return cy.get(elegido)
     };
-    retornarBlackShirt(elegido2){ 
-        return cy.get(elegido2)
-    };
-
 
     clickCerraMensajeAlert(){
         return cy.get(this.cerrarMensajeAlert)
@@ -25,10 +20,5 @@ export class Productos{
     clickGoShoppingCart(){
         return cy.get(this.goShoppingCart)
     };
-
-    //clickTotal(){
-    //    return cy.get(this.goShoppingCart)
-   // };
-
 
 };
