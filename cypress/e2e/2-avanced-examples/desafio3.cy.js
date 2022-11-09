@@ -5,7 +5,7 @@ import {LoginPage}from'../support/pages/loginPage'
 
 describe ('Desafio 3', () => {
 
-    let datosLogin
+    let datosLogin, compra
 
     const loginPage = new LoginPage();
     const productos = new Productos();
@@ -13,6 +13,10 @@ describe ('Desafio 3', () => {
     before("before", () => {
         cy.fixture('loginData').then(data => {
             datosLogin = data;
+        });
+
+        cy.fixture('compra').then(data => {
+            compra = data;
         });
     });
 
@@ -22,7 +26,6 @@ describe ('Desafio 3', () => {
        // cy.get("#registertoggle").dblclick();
         cy.xpath("//span[contains(@id, 'registertoggle')]").dblclick() 
 
-       // cy.wait(2000)
         loginPage.escribirUsuario(datosLogin.primerUsuario.username);
         loginPage.escribirContraseña(datosLogin.primerUsuario.password);
         loginPage.clickBotonLogin();
@@ -36,10 +39,10 @@ describe ('Desafio 3', () => {
 
         productos.clickOnlineShop().click();
   
-        productos.retornarBlackJacket(blackJacket).click();
+        productos.comprarProducto(blackJacket).click();
         productos.clickCerraMensajeAlert().click();
 
-        productos.retornarBlackShirt(blacktShirt).click();
+        productos.comprarProducto(blacktShirt).click();
         productos.clickCerraMensajeAlert().click();
 
         productos.clickGoShoppingCart().click();
